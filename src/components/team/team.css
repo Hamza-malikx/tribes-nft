@@ -1,0 +1,78 @@
+.userListWrapper .nav-tabs {
+  border-bottom: 1px solid transparent !important;
+  margin-bottom: 0px !important;
+}
+.userListWrapper .nav-item button {
+  border-radius: 15px 15px 0px 0px;
+  border: 1px solid transparent !important;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.userListWrapper .nav-tabs .nav-link.active {
+  background: #b18fb6 !important;
+  border-radius: 15px 15px 0px 0px;
+  color: #000000;
+}
+.userListWrapper .tab-content {
+  height: 75%;
+  background: #b18fb6;
+  border-radius: 0px 15px 15px 15px;
+  padding: 36px 10px;
+  margin-top: -2px;
+}
+.textStyle .dropdown {
+  height: 100%;
+}
+.textStyle .dropdown button {
+  padding-right: 20px;
+  height: 100%;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: "Helvetica 35 Thin", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fcfcfc;
+}
+.textStyle .dropdown button:focus:not(:focus-visible) {
+  box-shadow: none !important;
+}
+.textStyle .dropdown .dropdown-toggle::after {
+  margin-left: 1.255em;
+  vertical-align: 0.15em;
+}
+/* fontFam */
+.fontFam .dropdown button {
+  padding-right: 20px;
+  height: 100%;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: "Helvetica 35 Thin", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fcfcfc;
+}
+.fontFam .dropdown button:focus:not(:focus-visible) {
+  box-shadow: none !important;
+}
+.fontFam .dropdown .dropdown-toggle::after {
+  margin-left: 0.85em;
+  vertical-align: 0.15em;
+}
+@media screen and (max-width: 1350px) {
+  .textStyle .dropdown button {
+    padding-right: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .fontFam .dropdown button {
+    padding-right: 8px;
+  }
+}
