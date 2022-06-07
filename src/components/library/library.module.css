@@ -122,3 +122,10 @@
   color: #f4a0ff;
   margin: 6.5px 0 6.5px;
 }
+.dropDownContentWrapper {
+  display: flex;
+}
+.dropDownContentWrapper img {
+  width: 34px;
+  height: 26px;
+}

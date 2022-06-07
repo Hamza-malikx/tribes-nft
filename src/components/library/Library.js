@@ -8,6 +8,7 @@ import "./library.css";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import img from "../../assets/images/shirtless-zombies-pack-3d-model-low-poly-rigged-fbx-ma-unitypackage-uasset 2.png";
+import downAngle from "../../assets/icons/dashicons_arrow-down-alt2 (1).png";
 const Library = () => {
   const [dropdown, setDropdown] = useState(false);
   const dropDownHandler = () => {
@@ -86,7 +87,10 @@ const Library = () => {
           onChange={handleChange}
         >
           <MenuItem value="">
-            <em>All Assets(5)</em>
+            <div className={styles.dropDownContentWrapper}>
+              <em>All Assets(5)</em>
+              {/* <img src={downAngle} alt="" /> */}
+            </div>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
@@ -101,7 +105,10 @@ const Library = () => {
             onChange={handleChange1}
           >
             <MenuItem value="">
-              <em>Alphabetical</em>
+              <div className={styles.dropDownContentWrapper}>
+                <em>Alphabetical</em>
+                {/* <img src={downAngle} alt="" /> */}
+              </div>
             </MenuItem>
             <MenuItem value={10}>Ascending</MenuItem>
             <MenuItem value={20}>Descending</MenuItem>
