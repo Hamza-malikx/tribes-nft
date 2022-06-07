@@ -212,7 +212,7 @@ const App = ({ isServerInfo }) => {
 
           {/* <Redirect to="/dashboard" /> */}
           {/* <Redirect to="/dashboard" /> */}
-          {/* <Redirect to="/library" /> */}
+          <Redirect exact path="/" to="/dashboard" />
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>

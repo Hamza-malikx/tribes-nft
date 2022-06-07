@@ -135,3 +135,16 @@
   right: 0;
   color: #fff;
 }
+.filterWrapper
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:before {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/icons/dashicons_arrow-down-alt2 (1).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 34px;
+  height: 26px;
+  right: 0;
+  color: #fff;
+}
