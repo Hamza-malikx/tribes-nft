@@ -212,7 +212,7 @@ const App = ({ isServerInfo }) => {
 
           {/* <Redirect to="/dashboard" /> */}
           {/* <Redirect to="/dashboard" /> */}
-          <Redirect exact path="/" to="/dashboard" />
+          <Redirect exact from="/" to="/login" />
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>
