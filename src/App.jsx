@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
-// import logo from "./shiny-logo (1).png";
-import logo from "./assets/logos/GOS-4-removebg-preview 1.png";
 import meta from "./4984253-middle.png";
 import eth from "./kisspng-ethereum-portable-network-graphics-computer-icons-developers-icon-request-icon-ethereum-5cb941c220f890.5510979515556448661351.png";
 import {
@@ -13,6 +11,8 @@ import {
 } from "react-router-dom";
 import Account from "components/Account";
 import Chains from "components/Chains";
+import Library from "components/library/Library";
+import Settings from "components/settings/Settings";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
 import { Menu, Layout } from "antd";
@@ -26,11 +26,25 @@ import Dashboard from "components/dashboard/Dashboard.js";
 import Search from "components/search/Search.js";
 import Header1 from "./components/header/header";
 import Team from "./components/team/Team";
+import Shopper from "./components/profile/shopper/Shopper.js";
+import Creator from "./components/profile/creator/Creator.js";
+import Login from "components/Auth/login/Login.js";
+import CreateAccount from "components/Auth/signUp/CreateAccount";
+import LoginStepOne from "components/Auth/LoginProcess/LoginStepOne";
+import LoginStepTwo from "components/Auth/LoginProcess/LoginStepTwo";
+import LoginStepThree from "components/Auth/LoginProcess/LoginStepThree";
+import LoginStepFour from "components/Auth/LoginProcess/LoginStepFour";
+import SigninStepOne from "components/Auth/Signinprocess/SigninStepOne";
+import SigninStepTwo from "components/Auth/Signinprocess/SigninStepTwo";
+import SigninStepThree from "components/Auth/Signinprocess/SigninStepThree";
+import SigninStepFour from "components/Auth/Signinprocess/SigninStepFour";
+import Publish from "components/publish/Publish";
+import Store from "components/store/Store";
 const { Header, Footer } = Layout;
 const styles = {
   content: {
     display: "flex",
-    justifyContent: "center",
+    // justifyContent: "center",
     fontFamily: "Roboto, sans-serif",
     color: "#041836",
     marginTop: "40px",
@@ -125,8 +139,11 @@ const App = ({ isServerInfo }) => {
         </Header> */}
         <div style={styles.content}>
           <Switch>
-            <Route path="/nftBalance">
+            {/* <Route path="/nftBalance">
               <NFTBalance />
+            </Route> */}
+            <Route path="/library">
+              <Library />
             </Route>
             <Route path="/shop">
               <NFTTokenIds
@@ -134,9 +151,9 @@ const App = ({ isServerInfo }) => {
                 setInputValue={setInputValue}
               />
             </Route>
-            <Route path="/Transactions">
+            {/* <Route path="/Transactions">
               <NFTMarketTransactions />
-            </Route>
+            </Route> */}
             <Route path="/team">
               <Team />
             </Route>
@@ -146,10 +163,56 @@ const App = ({ isServerInfo }) => {
             <Route path="/search">
               <Search />
             </Route>
+            <Route exact path="/profile">
+              <Shopper />
+            </Route>
+            <Route exact path="/store">
+              <Store />
+            </Route>
+            <Route exact path="/profile/creator">
+              <Creator />
+            </Route>
+            <Route exact path="/settings">
+              <Settings />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <CreateAccount />
+            </Route>
+            <Route exact path="/loginstepone">
+              <LoginStepOne />
+            </Route>
+            <Route exact path="/loginsteptwo">
+              <LoginStepTwo />
+            </Route>
+            <Route exact path="/loginstepthree">
+              <LoginStepThree />
+            </Route>
+            <Route exact path="/loginstepfour">
+              <LoginStepFour />
+            </Route>
+            <Route exact path="/signinstepone">
+              <SigninStepOne />
+            </Route>
+            <Route exact path="/signinsteptwo">
+              <SigninStepTwo />
+            </Route>
+            <Route exact path="/signinstepthree">
+              <SigninStepThree />
+            </Route>
+            <Route exact path="/signinstepfour">
+              <SigninStepFour />
+            </Route>
+            <Route exact path="/publish">
+              <Publish />
+            </Route>
           </Switch>
 
           {/* <Redirect to="/dashboard" /> */}
-          <Redirect to="/dashboard" />
+          {/* <Redirect to="/dashboard" /> */}
+          {/* <Redirect to="/library" /> */}
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>

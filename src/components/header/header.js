@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./header.module.css";
 import logo from "../../assets/logos/GOS-4-removebg-preview 1.png";
-import shop from "../../assets/images/Vector (1).png";
+import shop from "../../assets/images/mdi_store-outline.png";
 import library from "../../assets/images/fluent_library-20-regular.png";
 import group from "../../assets/images/team.png";
 import profile from "../../assets/images/carbon_user-avatar.png";
@@ -18,6 +18,7 @@ const Header = (props) => {
   const [prof, setProf] = useState(false);
   const [shopp, setShop] = useState(false);
   const [balance, setBalance] = useState(false);
+  const [settingsState, setSettings] = useState(false);
   const locationChecker = () => {
     if (location.pathname === "/team") {
       setTeam(true);
@@ -26,6 +27,7 @@ const Header = (props) => {
       setProf(false);
       setShop(false);
       setBalance(false);
+      setSettings(false);
     } else if (location.pathname === "/search") {
       setTeam(false);
       setSearch(true);
@@ -33,6 +35,7 @@ const Header = (props) => {
       setProf(false);
       setShop(false);
       setBalance(false);
+      setSettings(false);
     } else if (location.pathname === "/dashboard") {
       setTeam(false);
       setSearch(false);
@@ -40,27 +43,50 @@ const Header = (props) => {
       setProf(false);
       setShop(false);
       setBalance(false);
-    } else if (location.pathname === "/Transactions") {
+      setSettings(false);
+    } else if (
+      location.pathname === "/profile" ||
+      location.pathname === "/profile/creator"
+    ) {
       setTeam(false);
       setSearch(false);
       setDashboard(false);
       setProf(true);
       setShop(false);
       setBalance(false);
-    } else if (location.pathname === "/shop") {
+      setSettings(false);
+    } else if (location.pathname === "/store") {
       setTeam(false);
       setSearch(false);
       setDashboard(false);
       setProf(false);
       setShop(true);
       setBalance(false);
-    } else if (location.pathname === "/nftBalance") {
+      setSettings(false);
+    } else if (location.pathname === "/library") {
       setTeam(false);
       setSearch(false);
       setDashboard(false);
       setProf(false);
       setShop(false);
       setBalance(true);
+      setSettings(false);
+    } else if (location.pathname === "/settings") {
+      setTeam(false);
+      setSearch(false);
+      setDashboard(false);
+      setProf(false);
+      setShop(false);
+      setBalance(false);
+      setSettings(true);
+    } else {
+      setTeam(false);
+      setSearch(false);
+      setDashboard(false);
+      setProf(false);
+      setShop(false);
+      setBalance(false);
+      setSettings(false);
     }
   };
   useEffect(() => {
@@ -78,14 +104,18 @@ const Header = (props) => {
         <div>
           {shopp === true ? (
             <>
-              <div className={`${styles.activeItem} ${styles.shopAct}`}>
+              <div
+                className={`${styles.activeItem} 
+           
+              `}
+              >
                 <img src={shop} alt="" />
-                <p>Shop</p>
+                <p>Store</p>
               </div>
             </>
           ) : (
-            <Link to="/shop">
-              <img src={shop} alt="" />
+            <Link to="/store">
+              <img src={shop} alt="" className={styles.nonActives} />
             </Link>
           )}
         </div>
@@ -98,8 +128,8 @@ const Header = (props) => {
               </div>
             </>
           ) : (
-            <Link to="/nftBalance">
-              <img src={library} alt="" />
+            <Link to="/library">
+              <img src={library} alt="" className={styles.nonActives} />
             </Link>
           )}
         </div>
@@ -155,15 +185,24 @@ const Header = (props) => {
               </div>
             </>
           ) : (
-            <Link to="/Transactions">
-              <img src={profile} alt="" />
+            <Link to="/profile">
+              <img src={profile} alt="" className={styles.nonActives} />
             </Link>
           )}
         </div>
         <div>
-          <Link to="/dashboard">
-            <img src={settings} alt="" />
-          </Link>
+          {settingsState === true ? (
+            <>
+              <div className={`${styles.activeItem}`}>
+                <img src={settings} alt="" />
+                <p>Settings</p>
+              </div>
+            </>
+          ) : (
+            <Link to="/settings">
+              <img src={settings} alt="" className={styles.nonActives} />
+            </Link>
+          )}
         </div>
         {/* <div className={styles.rightContent}>
           <div></div>

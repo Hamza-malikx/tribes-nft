@@ -1,0 +1,410 @@
+.home_custom_section_8_body_main {
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 80px;
+}
+.home_custom_section_8_main {
+  display: block;
+  width: 100%;
+  padding: 0px 0px;
+  float: left;
+  height: 100vh;
+  background: #b18fb6;
+  overflow-y: auto;
+}
+.custom_container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.home_custom_section_8 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". .";
+  grid-template-rows: auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+.home_custom_section_8 figure {
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home_custom_section_8 figure img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+.home_custom_section_8_body {
+  display: grid;
+  flex-direction: column;
+  gap: 24px 0px;
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+}
+.home_custom_section_8_heading {
+  display: grid;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px 0px;
+}
+.home_custom_section_8_heading small {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.home_custom_section_8_heading h3 {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 60px;
+  color: #212121;
+}
+.home_custom_section_8_body ul {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+.home_custom_section_8_body ul li {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  list-style: none;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.home_custom_section_8_body ul li i {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 4px;
+  padding-right: 4px;
+}
+.home_custom_section_8_body .more_detail_btn {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 164px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #151515;
+}
+
+@media (max-width: 1024px) {
+  .home_custom_section_8_heading h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .home_custom_section_8_body_main {
+    padding-right: 40px;
+    padding-left: 30px;
+  }
+  .home_custom_section_8_body {
+    gap: 18px 0px;
+    width: 100%;
+  }
+  .home_custom_section_8_heading {
+    gap: 5px 0px;
+  }
+
+  .home_custom_section_8_body p {
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .home_custom_section_8_body_main {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .home_custom_section_8_main {
+    padding-top: 0px;
+    padding-right: 0px;
+  }
+  .home_custom_section_8_body ul {
+    justify-content: center;
+  }
+  .home_custom_section_8_learn_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home_custom_section_8_body {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home_custom_section_8_body {
+    padding: 0px 25px 40px 25px;
+  }
+}
+@media (max-width: 540px) {
+  .home_custom_section_8_heading h3 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .home_custom_section_8_body {
+    padding: 0px 0px 40px 0px;
+  }
+}
+@media (max-width: 450px) {
+}
+
+.signup_single_checkbox_field {
+  display: flex;
+  align-items: center;
+}
+.signup_single_checkbox_content {
+  width: 21px;
+  height: 21px;
+}
+.signup_custom_checkbox_input {
+  width: 21px;
+  height: 21px;
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+}
+.signup_custom_checkbox_input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.signup_custom_checkbox_input .checked_input_style {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccd6eb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+.signup_custom_checkbox_input .checked_input_style i {
+  color: #ccd6eb;
+  font-size: 14px;
+}
+.signup_custom_checkbox_input input:checked + .checked_input_style {
+  background: #000000;
+}
+.signup_custom_checkbox_input input:checked + .checked_input_style i {
+  color: #ffffff;
+}
+
+.signup_single_checkbox_field p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  padding-left: 10px;
+  margin: 0px;
+  text-align: left;
+}
+.contact-sectionOne-box {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  width: 100%;
+  gap: 60px 0px;
+  padding: 20px 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+.contact-sectionOne-box-heading {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  width: 100%;
+  gap: 5px 0px;
+}
+.contact-sectionOne-box-heading h3 {
+  font-size: 29px;
+  line-height: 36px;
+  color: #212121;
+  font-weight: 500;
+  margin: 0px;
+  font-family: "Roboto";
+}
+
+.contac_page_form_content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 30px 0px;
+}
+.contact_us_form_fields {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 5px 0px;
+}
+.contact_us_form_fields input {
+  border: 1px solid #490eaa;
+  box-sizing: border-box;
+  height: 48px;
+  padding: 0px 10px 0px 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #490eaa;
+}
+.contact_us_form_fields select {
+  border: 1px solid #490eaa;
+  box-sizing: border-box;
+  height: 48px;
+  padding: 0px 10px 0px 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #490eaa;
+}
+.contact_us_form_inner_fields {
+  display: flex;
+  flex-direction: column;
+}
+.contact_us_form_inner_fields span {
+  font-size: 13px;
+  line-height: 19px;
+  color: #ffffff;
+  padding-bottom: 15px;
+  text-align: left;
+}
+.contact_us_form_fields input::placeholder {
+  color: #ffffff;
+}
+.contact_us_form_fields label.error {
+  color: #cc0000;
+  text-transform: capitalize;
+  margin: 0px !important;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 11px;
+}
+.contact_us_form_submit_btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.contact_us_form_submit_btn button {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  border: 1px solid #490eaa;
+  background: #490eaa;
+  border-radius: 8px;
+  position: relative;
+}
+.contact_us_form_submit_btn a {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  border: 1px solid #490eaa;
+  background: #490eaa;
+  border-radius: 8px;
+  position: relative;
+}
+.login_create_account_btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.login_create_account_btn a {
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  width: 190px;
+  height: 44px;
+  text-transform: capitalize;
+  color: #ffffff !important;
+  font-size: 16px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contact-sectionOne-data {
+    grid-template-columns: 1fr;
+    grid-template-areas: ".";
+  }
+}
+@media (max-width: 540px) {
+  .contact_us_form_box {
+    grid-template-columns: 1fr;
+  }
+  .home_custom_section_8 {
+    grid-template-columns: 1fr;
+    grid-template-areas: ".";
+  }
+  .home_custom_section_8 figure {
+    height: 200px;
+    background-image: url("../../assets/images/login-banner.png");
+    background-position: center;
+  }
+  .home_custom_section_8 figure img {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+.nav-tabs {
+  border-bottom: 0px solid #dee2e6 !important;
+}
+.nav-tabs .nav-link.active {
+  background-color: #b18fb6 !important;
+  border-color: #b18fb6 !important;
+}
+.nav-tabs .nav-link {
+  border-radius: 15px 15px 0 0;
+}
+.nav-item button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff !important;
+}
+.nav-link {
+  color: #ffffff !important;
+}
+.nav-tabs .nav-link:hover {
+  border-color: transparent !important;
+}
+.tab-content {
+  background: #b18fb6;
+  border-radius: 0 12px 12px 12px;
+}
