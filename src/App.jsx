@@ -251,7 +251,7 @@ const App = ({ isServerInfo }) => {
               </Route>
             </Suspense>
           </Switch>
-          <Redirect exact from="*" to="/settings" />
+          <Redirect exact from="*" to="/dashboard" />
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>
