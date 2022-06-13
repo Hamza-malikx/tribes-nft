@@ -26,7 +26,12 @@ const SideBar = () => {
           $(this).addClass("active");
         }
       });
-
+      $(".crypto").click(function () {
+        if (!$(this).hasClass("active")) {
+          $(".single_pofile_tab.active").removeClass("active");
+          $(this).addClass("active");
+        }
+      });
       $(".activity_logs").click(function () {
         if (!$(this).hasClass("active")) {
           $(".single_pofile_tab.active").removeClass("active");
@@ -55,6 +60,7 @@ const SideBar = () => {
       $("#policies_tab_content").css("display", "none");
       $("#activity_logs_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "none");
+      $("#cryptoRight").css("display", "none");
     });
 
     $(".loyalty_points").click(function () {
@@ -65,6 +71,7 @@ const SideBar = () => {
       $("#policies_tab_content").css("display", "none");
       $("#view_order_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "none");
+      $("#cryptoRight").css("display", "none");
     });
 
     $(".change_password").click(function () {
@@ -75,8 +82,18 @@ const SideBar = () => {
       $("#policies_tab_content").css("display", "none");
       $("#view_order_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "block");
+      $("#cryptoRight").css("display", "none");
     });
-
+    $(".crypto").click(function () {
+      $("#personal_info_tab_content").css("display", "none");
+      $("#loyalty_points_tab_content").css("display", "none");
+      $("#change_password_tab_content").css("display", "none");
+      $("#policies_tab_content").css("display", "none");
+      $("#activity_logs_tab_content").css("display", "none");
+      $("#view_order_tab_content").css("display", "none");
+      $("#billing_tab_content").css("display", "none");
+      $("#cryptoRight").css("display", "block");
+    });
     $(".activity_logs").click(function () {
       $("#personal_info_tab_content").css("display", "none");
       $("#loyalty_points_tab_content").css("display", "none");
@@ -85,6 +102,7 @@ const SideBar = () => {
       $("#activity_logs_tab_content").css("display", "block");
       $("#view_order_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "none");
+      $("#cryptoRight").css("display", "none");
     });
     $(".password").click(function () {
       $("#personal_info_tab_content").css("display", "none");
@@ -94,6 +112,7 @@ const SideBar = () => {
       $("#policies_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "none");
       $("#view_order_tab_content").css("display", "block");
+      $("#cryptoRight").css("display", "none");
     });
     $(".Policies").click(function () {
       $("#personal_info_tab_content").css("display", "none");
@@ -103,6 +122,7 @@ const SideBar = () => {
       $("#view_order_tab_content").css("display", "none");
       $("#billing_tab_content").css("display", "none");
       $("#policies_tab_content").css("display", "block");
+      $("#cryptoRight").css("display", "none");
     });
   }, []);
 
@@ -134,6 +154,9 @@ const SideBar = () => {
           <div class="pofile_list_details_main">
             <div class="single_pofile_tab_heading">
               <small>Payment</small>
+            </div>
+            <div class="single_pofile_tab crypto">
+              <small>Crypto</small>
             </div>
             <div class="single_pofile_tab activity_logs">
               <small>Credit Cards</small>

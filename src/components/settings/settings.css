@@ -1124,3 +1124,24 @@
     color: #000000;
   }
 }
+.cryptoRight {
+  display: none;
+}
+.cryptoRight h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.cryptoRight p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a4a4a4;
+  margin-bottom: 14px;
+  margin-top: 30px;
+}

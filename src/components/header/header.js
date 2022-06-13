@@ -10,7 +10,6 @@ import cart from "../../assets/images/cart.png";
 import settings from "../../assets/images/clarity_settings-line.png";
 import searchIcon from "../../assets/images/search.png";
 const Header = (props) => {
-  // console.log(props);
   let location = useLocation();
   const [search, setSearch] = useState(false);
   const [team, setTeam] = useState(false);

@@ -7,6 +7,7 @@ import Email from "./Email";
 import CreditCard from "./CreditCard";
 import Billing from "./Billing";
 import Policies from "./Policies";
+import Crypto from "./Crypto";
 const Settings = () => {
   return (
     <section className="profile_page_section">
@@ -23,6 +24,7 @@ const Settings = () => {
                 <Password />
                 <Email />
                 <CreditCard />
+                <Crypto />
                 <Billing />
                 <Policies />
               </div>

@@ -3,6 +3,7 @@ import styles from "./store.module.css";
 import searchIcon from "../../assets/icons/emojione_magnifying-glass-tilted-left (1).png";
 import "./store.css";
 import Accordion from "react-bootstrap/Accordion";
+import { useHistory } from "react-router-dom";
 import "./store.css";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
@@ -10,11 +11,15 @@ import Barn from "../../assets/images/Barn 1.png";
 import zombies from "../../assets/images/shirtless-zombies-pack-3d-model-low-poly-rigged-fbx-ma-unitypackage-uasset 2.png";
 import tracktor from "../../assets/images/tractor-min 1.png";
 const Store = () => {
+  const history = useHistory();
   const [searchResultState, setSearchResultState] = useState(false);
   const searchResultHandler = () => {
     searchResultState === true
       ? setSearchResultState(false)
       : setSearchResultState(true);
+  };
+  const detailsNavigator = () => {
+    history.push("/details");
   };
   return (
     <div className={styles.store}>
@@ -143,7 +148,7 @@ const Store = () => {
                           className={styles.recommendationBlockDetailsWrapper}
                         >
                           <p>$39.99</p>
-                          <button>Details</button>
+                          <button onClick={detailsNavigator}>Details</button>
                         </div>
                       </div>
                       <div className={styles.recommendationInnerBlocks}>
@@ -153,7 +158,7 @@ const Store = () => {
                           className={styles.recommendationBlockDetailsWrapper}
                         >
                           <p>$19.99</p>
-                          <button>Details</button>
+                          <button onClick={detailsNavigator}>Details</button>
                         </div>
                       </div>
                       <div className={styles.recommendationInnerBlocks}>
@@ -163,7 +168,7 @@ const Store = () => {
                           className={styles.recommendationBlockDetailsWrapper}
                         >
                           <p>$39.99</p>
-                          <button>Details</button>
+                          <button onClick={detailsNavigator}>Details</button>
                         </div>
                       </div>
                     </div>

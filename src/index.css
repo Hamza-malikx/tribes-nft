@@ -130,3 +130,31 @@ select {
   line-height: 21px;
   color: #ffffff;
 }
+/* Slider */
+.slick-slide img {
+  margin: auto;
+  background: #757575;
+  border-radius: 12px;
+  width: 197px;
+  height: 172px;
+}
+.slick-next:before {
+  background: url("./assets/icons/Polygon 5.png");
+  width: 27px;
+  height: 27px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent;
+}
+.slick-prev:before {
+  background: url("./assets/icons/Polygon 6.png");
+  width: 27px;
+  height: 27px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent;
+}

@@ -44,6 +44,7 @@ const LoginStepFour = lazy(() =>
 const Search = lazy(() => import("components/search/Search"));
 // const Header1 = lazy(() => import("components/header/header"));
 const Team = lazy(() => import("components/team/Team"));
+const AssetDetails = lazy(() => import("components/assetDetails/AssetDetails"));
 const Dashboard = lazy(() => import("components/dashboard/Dashboard"));
 const SigninStepOne = lazy(() =>
   import("components/Auth/Signinprocess/SigninStepOne")
@@ -120,7 +121,8 @@ const App = ({ isServerInfo }) => {
       }}
     >
       <Router>
-        <Header1 data={setInputValue} />
+        <Header1 data={<NativeBalance />} />
+
         {/* <Header style={styles.header}>
           <img
             src={logo}
@@ -187,6 +189,9 @@ const App = ({ isServerInfo }) => {
               <Route path="/dashboard">
                 <Dashboard />
               </Route>
+              <Route path="/details">
+                <AssetDetails />
+              </Route>
               <Route path="/search">
                 <Search />
               </Route>
@@ -246,7 +251,7 @@ const App = ({ isServerInfo }) => {
               </Route>
             </Suspense>
           </Switch>
-          <Redirect exact from="*" to="/profile" />
+          <Redirect exact from="*" to="/settings" />
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>

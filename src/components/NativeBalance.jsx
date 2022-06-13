@@ -5,7 +5,7 @@ function NativeBalance(props) {
   const { balance, nativeName } = useNativeBalance(props);
 
   return (
-    <div style={{ textAlign: "center", whiteSpace: "nowrap" }}>{`${n4.format(
+    <div style={{ whiteSpace: "nowrap", color: "#fff" }}>{`${n4.format(
       balance.formatted
     )} ${nativeName}`}</div>
   );
