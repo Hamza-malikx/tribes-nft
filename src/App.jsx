@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
 import meta from "./4984253-middle.png";
 import eth from "./kisspng-ethereum-portable-network-graphics-computer-icons-developers-icon-request-icon-ethereum-5cb941c220f890.5510979515556448661351.png";
+import Loading from "./components/loading/Loading";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,8 +12,6 @@ import {
 } from "react-router-dom";
 import Account from "components/Account";
 import Chains from "components/Chains";
-import Library from "components/library/Library";
-import Settings from "components/settings/Settings";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
 import { Menu, Layout } from "antd";
@@ -22,24 +21,51 @@ import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import Text from "antd/lib/typography/Text";
 import NFTMarketTransactions from "components/NFTMarketTransactions";
-import Dashboard from "components/dashboard/Dashboard.js";
-import Search from "components/search/Search.js";
-import Header1 from "./components/header/header";
-import Team from "./components/team/Team";
-import Shopper from "./components/profile/shopper/Shopper.js";
-import Creator from "./components/profile/creator/Creator.js";
-import Login from "components/Auth/login/Login.js";
-import CreateAccount from "components/Auth/signUp/CreateAccount";
-import LoginStepOne from "components/Auth/LoginProcess/LoginStepOne";
-import LoginStepTwo from "components/Auth/LoginProcess/LoginStepTwo";
-import LoginStepThree from "components/Auth/LoginProcess/LoginStepThree";
-import LoginStepFour from "components/Auth/LoginProcess/LoginStepFour";
-import SigninStepOne from "components/Auth/Signinprocess/SigninStepOne";
-import SigninStepTwo from "components/Auth/Signinprocess/SigninStepTwo";
-import SigninStepThree from "components/Auth/Signinprocess/SigninStepThree";
-import SigninStepFour from "components/Auth/Signinprocess/SigninStepFour";
-import Publish from "components/publish/Publish";
-import Store from "components/store/Store";
+import Header1 from "components/header/header";
+const Shopper = lazy(() => import("components/profile/shopper/Shopper"));
+const Login = lazy(() => import("components/Auth/login/Login"));
+const Creator = lazy(() => import("components/profile/creator/Creator"));
+const CreateAccount = lazy(() =>
+  import("components/Auth/signUp/CreateAccount")
+);
+const LoginStepOne = lazy(() =>
+  import("components/Auth/LoginProcess/LoginStepOne")
+);
+const LoginStepTwo = lazy(() =>
+  import("components/Auth/LoginProcess/LoginStepTwo")
+);
+const LoginStepThree = lazy(() =>
+  import("components/Auth/LoginProcess/LoginStepThree")
+);
+const LoginStepFour = lazy(() =>
+  import("components/Auth/LoginProcess/LoginStepFour")
+);
+
+const Search = lazy(() => import("components/search/Search"));
+// const Header1 = lazy(() => import("components/header/header"));
+const Team = lazy(() => import("components/team/Team"));
+const Dashboard = lazy(() => import("components/dashboard/Dashboard"));
+const SigninStepOne = lazy(() =>
+  import("components/Auth/Signinprocess/SigninStepOne")
+);
+const SigninStepTwo = lazy(() =>
+  import("components/Auth/Signinprocess/SigninStepTwo")
+);
+const SigninStepThree = lazy(() =>
+  import("components/Auth/Signinprocess/SigninStepThree")
+);
+const SigninStepFour = lazy(() =>
+  import("components/Auth/Signinprocess/SigninStepFour")
+);
+
+const Publish = lazy(() => import("components/publish/Publish"));
+const Store = lazy(() => import("components/store/Store"));
+const Library = lazy(() => import("components/library/Library"));
+const Settings = lazy(() => import("components/settings/Settings"));
+const Checkout = lazy(() => import("components/checkout/Checkout"));
+const Cart = lazy(() => import("components/cart/Cart"));
+const CloudStorage = lazy(() => import("components/cloudStorage/CloudStorage"));
+
 const { Header, Footer } = Layout;
 const styles = {
   content: {
@@ -139,80 +165,88 @@ const App = ({ isServerInfo }) => {
         </Header> */}
         <div style={styles.content}>
           <Switch>
-            {/* <Route path="/nftBalance">
+            <Suspense fallback={<Loading />}>
+              {/* <Route path="/nftBalance">
               <NFTBalance />
             </Route> */}
-            <Route path="/library">
-              <Library />
-            </Route>
-            <Route path="/shop">
-              <NFTTokenIds
-                inputValue={inputValue}
-                setInputValue={setInputValue}
-              />
-            </Route>
-            {/* <Route path="/Transactions">
+              <Route path="/library">
+                <Library />
+              </Route>
+              <Route path="/shop">
+                <NFTTokenIds
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                />
+              </Route>
+              {/* <Route path="/Transactions">
               <NFTMarketTransactions />
             </Route> */}
-            <Route path="/team">
-              <Team />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route exact path="/profile">
-              <Shopper />
-            </Route>
-            <Route exact path="/store">
-              <Store />
-            </Route>
-            <Route exact path="/profile/creator">
-              <Creator />
-            </Route>
-            <Route exact path="/settings">
-              <Settings />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <CreateAccount />
-            </Route>
-            <Route exact path="/loginstepone">
-              <LoginStepOne />
-            </Route>
-            <Route exact path="/loginsteptwo">
-              <LoginStepTwo />
-            </Route>
-            <Route exact path="/loginstepthree">
-              <LoginStepThree />
-            </Route>
-            <Route exact path="/loginstepfour">
-              <LoginStepFour />
-            </Route>
-            <Route exact path="/signinstepone">
-              <SigninStepOne />
-            </Route>
-            <Route exact path="/signinsteptwo">
-              <SigninStepTwo />
-            </Route>
-            <Route exact path="/signinstepthree">
-              <SigninStepThree />
-            </Route>
-            <Route exact path="/signinstepfour">
-              <SigninStepFour />
-            </Route>
-            <Route exact path="/publish">
-              <Publish />
-            </Route>
+              {/* <Route path="/team">
+                <Team />
+              </Route> */}
+              <Route path="/dashboard">
+                <Dashboard />
+              </Route>
+              <Route path="/search">
+                <Search />
+              </Route>
+              <Route exact path="/profile">
+                <Shopper />
+              </Route>
+              <Route exact path="/store">
+                <Store />
+              </Route>
+              <Route exact path="/profile/creator">
+                <Creator />
+              </Route>
+              <Route exact path="/settings">
+                <Settings />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/signup">
+                <CreateAccount />
+              </Route>
+              <Route exact path="/loginstepone">
+                <LoginStepOne />
+              </Route>
+              <Route exact path="/loginsteptwo">
+                <LoginStepTwo />
+              </Route>
+              <Route exact path="/loginstepthree">
+                <LoginStepThree />
+              </Route>
+              <Route exact path="/loginstepfour">
+                <LoginStepFour />
+              </Route>
+              <Route exact path="/signinstepone">
+                <SigninStepOne />
+              </Route>
+              <Route exact path="/signinsteptwo">
+                <SigninStepTwo />
+              </Route>
+              <Route exact path="/signinstepthree">
+                <SigninStepThree />
+              </Route>
+              <Route exact path="/signinstepfour">
+                <SigninStepFour />
+              </Route>
+              <Route exact path="/publish">
+                <Publish />
+              </Route>
+              <Route exact path="/cloud-storage">
+                <CloudStorage />
+              </Route>
+              <Route exact path="/cart">
+                <Cart />
+              </Route>
+              <Route exact path="/checkout">
+                <Checkout />
+              </Route>
+            </Suspense>
           </Switch>
-
-          {/* <Redirect to="/dashboard" /> */}
-          {/* <Redirect to="/dashboard" /> */}
-          <Redirect exact from="/" to="/login" />
+          <Redirect exact from="*" to="/profile" />
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>

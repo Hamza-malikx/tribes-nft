@@ -62,3 +62,71 @@ select {
 .ant-layout-footer {
   margin-top: auto;
 }
+/* checkoutModal */
+.checkoutModal .modal-content {
+  background: #000000;
+  box-shadow: -5px 5px 19px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  max-width: 670px;
+}
+.checkoutModal .modal-dialog-centered {
+  justify-content: center;
+}
+.checkoutModal .modal-title {
+  display: none !important;
+}
+.checkoutModal .modal-header {
+  border-bottom: 1px solid transparent;
+}
+.checkoutModal .btn-close {
+  /* background: none !important; */
+  background: url("./assets/icons/X.png");
+  content: "";
+  width: 0px;
+  height: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+.checkoutModal .modal-footer {
+  display: none;
+}
+.checkoutModal .modal-body {
+  width: 74%;
+  margin: 0 auto;
+}
+.checkoutModal .modal-body h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #ffffff;
+  padding: 47px 10px 60px;
+}
+.checkoutModal .modalBtnWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 97px;
+}
+.checkoutModal .modalBtnWrap button {
+  width: 56px;
+  height: 27px;
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}

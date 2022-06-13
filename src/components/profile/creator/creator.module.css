@@ -69,6 +69,27 @@
   text-decoration-line: underline;
   color: #ffffff;
 }
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: stretch;
+}
+.heroRight a {
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgb(255 255 255 / 25%);
+  border-radius: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  border: 1px solid #490eaa;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+}
 .heroRight button {
   background: #490eaa;
   box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
@@ -81,7 +102,7 @@
   color: #ffffff;
   border: 1px solid #490eaa;
   padding: 12px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 /* analytics */
 .analyticsWrapper {
@@ -163,6 +184,10 @@
   background: #490eaa;
   box-shadow: -5px 5px 19px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  cursor: pointer;
+}
+.uplaodNewAssets:hover h6 {
+  text-decoration: underline;
 }
 .uplaodNewAssetsWrapper {
   display: flex;

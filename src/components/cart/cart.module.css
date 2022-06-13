@@ -1,0 +1,240 @@
+.cart {
+  padding: 210px 0 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+.cartHeroWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartHeroWrap h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fffcfc;
+  margin-bottom: 20px;
+}
+.btnWrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btnWrap button:first-child {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 178px;
+  height: 34px;
+  border: 1px solid #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+.btnWrap button:first-child:hover {
+  background-color: #490eaa;
+  transition: 0.5s ease-in-out;
+}
+.btnWrap button:last-child {
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 178px;
+  height: 34px;
+  border: 1px solid #490eaa;
+}
+.tableWrap {
+  background: #000000;
+  border: 1px solid #000000;
+  width: 100%;
+  margin-bottom: 55px;
+}
+.tableHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.tableBodyRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items {
+  padding: 20px 37px 32px;
+  width: 40%;
+}
+.restCols {
+  padding: 20px 37px 32px;
+  width: 20%;
+  text-align: center;
+}
+.itemsWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 17px;
+}
+.itemsWrapper img {
+  width: 34px;
+  height: 48px;
+}
+.itemsRight h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.actions div {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.actions div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.actions div:first-child {
+  padding-right: 6.5px;
+  border-right: 1px solid #fff;
+}
+.actions div:last-child {
+  padding-left: 3px;
+}
+.restCols h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.restCols p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.totalAndTopPickWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 259px;
+  margin-bottom: 22px;
+}
+.totalAndTopPickWrapLeft {
+  max-width: 421px;
+  width: 100%;
+  background: #000000;
+  padding: 22px 15px 29px;
+}
+.totalAndTopPickWrapLeftRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.totalAndTopPickWrapLeft .totalAndTopPickWrapLeftRow:last-child {
+  margin-bottom: 0px;
+}
+.totalAndTopPickWrapLeftRow h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.totalAndTopPickWrapLeftRow h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.totalAndTopPickWrapRight {
+  align-self: stretch;
+}
+.totalAndTopPickWrapRight h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 11px;
+}
+.topPickWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  height: calc(100% - 49px);
+}
+.topPickCards {
+  max-width: 126px;
+  width: 100%;
+  background: #7a5089;
+  height: 100%;
+}
+.topPickCards img {
+  height: 99px;
+  margin-bottom: 8px;
+}
+.topPickCardsContentWrap {
+  display: flex;
+  flex-direction: column;
+}
+.topPickCardsContentWrap p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 9px;
+}
+.storage {
+  display: inline-block;
+  color: #fff;
+}
+.storage a {
+  margin-left: 4px;
+  color: #0029ff;
+}

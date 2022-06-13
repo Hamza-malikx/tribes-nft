@@ -72,6 +72,9 @@
 .activeItemSp {
   width: 135px;
 }
+.activeItemCart {
+  width: 105px;
+}
 .activeItem img {
   width: 25px;
   height: 23px;

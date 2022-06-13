@@ -14,32 +14,41 @@ const Header = (props) => {
   let location = useLocation();
   const [search, setSearch] = useState(false);
   const [team, setTeam] = useState(false);
-  const [dashboard, setDashboard] = useState(true);
+  const [cartAg, setCart] = useState(true);
   const [prof, setProf] = useState(false);
   const [shopp, setShop] = useState(false);
   const [balance, setBalance] = useState(false);
   const [settingsState, setSettings] = useState(false);
   const locationChecker = () => {
-    if (location.pathname === "/team") {
-      setTeam(true);
-      setSearch(false);
-      setDashboard(false);
-      setProf(false);
-      setShop(false);
-      setBalance(false);
-      setSettings(false);
-    } else if (location.pathname === "/search") {
+    // if (location.pathname === "/team") {
+    //   setTeam(true);
+    //   setSearch(false);
+    //   setCart(false);
+    //   setProf(false);
+    //   setShop(false);
+    //   setBalance(false);
+    //   setSettings(false);
+    // } else
+    if (location.pathname === "/search") {
       setTeam(false);
       setSearch(true);
-      setDashboard(false);
+      setCart(false);
       setProf(false);
       setShop(false);
       setBalance(false);
       setSettings(false);
-    } else if (location.pathname === "/dashboard") {
+    } else if (location.pathname === "/cart") {
       setTeam(false);
       setSearch(false);
-      setDashboard(true);
+      setCart(true);
+      setProf(false);
+      setShop(false);
+      setBalance(false);
+      setSettings(false);
+    } else if (location.pathname === "/checkout") {
+      setTeam(false);
+      setSearch(false);
+      setCart(true);
       setProf(false);
       setShop(false);
       setBalance(false);
@@ -50,7 +59,7 @@ const Header = (props) => {
     ) {
       setTeam(false);
       setSearch(false);
-      setDashboard(false);
+      setCart(false);
       setProf(true);
       setShop(false);
       setBalance(false);
@@ -58,7 +67,7 @@ const Header = (props) => {
     } else if (location.pathname === "/store") {
       setTeam(false);
       setSearch(false);
-      setDashboard(false);
+      setCart(false);
       setProf(false);
       setShop(true);
       setBalance(false);
@@ -66,7 +75,7 @@ const Header = (props) => {
     } else if (location.pathname === "/library") {
       setTeam(false);
       setSearch(false);
-      setDashboard(false);
+      setCart(false);
       setProf(false);
       setShop(false);
       setBalance(true);
@@ -74,7 +83,7 @@ const Header = (props) => {
     } else if (location.pathname === "/settings") {
       setTeam(false);
       setSearch(false);
-      setDashboard(false);
+      setCart(false);
       setProf(false);
       setShop(false);
       setBalance(false);
@@ -82,7 +91,7 @@ const Header = (props) => {
     } else {
       setTeam(false);
       setSearch(false);
-      setDashboard(false);
+      setCart(false);
       setProf(false);
       setShop(false);
       setBalance(false);
@@ -133,7 +142,7 @@ const Header = (props) => {
             </Link>
           )}
         </div>
-        <div>
+        {/* <div>
           {team === true ? (
             <>
               <div className={styles.activeItem}>
@@ -146,7 +155,7 @@ const Header = (props) => {
               <img src={group} alt="" className={styles.nonActives} />
             </Link>
           )}
-        </div>
+        </div> */}
         <div>
           {search === true ? (
             <>
@@ -163,15 +172,15 @@ const Header = (props) => {
         </div>
 
         <div>
-          {dashboard === true ? (
+          {cartAg === true ? (
             <>
-              <div className={`${styles.activeItem} ${styles.activeItemSp}`}>
+              <div className={`${styles.activeItem} ${styles.activeItemCart}`}>
                 <img src={cart} alt="" />
-                <p>Dashboard</p>
+                <p>cart</p>
               </div>
             </>
           ) : (
-            <Link to="/dashboard">
+            <Link to="/cart">
               <img src={cart} alt="" className={styles.nonActives} />
             </Link>
           )}

@@ -8,7 +8,7 @@ import "./library.css";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import img from "../../assets/images/shirtless-zombies-pack-3d-model-low-poly-rigged-fbx-ma-unitypackage-uasset 2.png";
-import downAngle from "../../assets/icons/dashicons_arrow-down-alt2 (1).png";
+import { Link } from "react-router-dom";
 const Library = () => {
   const [dropdown, setDropdown] = useState(false);
   const dropDownHandler = () => {
@@ -75,8 +75,8 @@ const Library = () => {
           ) : null}
         </div>
         <div className={styles.storage}>
-          What more storage?
-          <a href="#">Try our Cloud Storage </a>
+          Want more storage?
+          <Link to="/cloud-storage">Try our Cloud Storage </Link>
         </div>
       </div>
       <div className={`${styles.filterWrapper} filterWrapper`}>

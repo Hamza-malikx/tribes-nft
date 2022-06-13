@@ -30,6 +30,8 @@ const Shopper = () => {
               </div>
             </div>
             <div className={styles.heroRight}>
+              {/* <a href="https://www.tribalnetwork.org/viewprofile"> */}
+              <a href="https://www.tribalnetwork.org">View Portfolio</a>
               <button onClick={clickHandler}>Switch to Creator Account</button>
             </div>
           </div>

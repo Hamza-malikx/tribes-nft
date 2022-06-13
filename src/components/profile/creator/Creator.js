@@ -77,6 +77,9 @@ const Creator = () => {
       downloads: 4300,
     },
   ];
+  const navigateToPublish = () => {
+    navigate.push("/publish");
+  };
   return (
     <div className={styles.creator}>
       <div className={styles.hero}>
@@ -95,6 +98,7 @@ const Creator = () => {
               </div>
             </div>
             <div className={styles.heroRight}>
+              <a href="https://www.tribalnetwork.org">View Portfolio</a>
               <button onClick={clickHandler}>Switch to Shopper Account</button>
             </div>
           </div>
@@ -227,7 +231,7 @@ const Creator = () => {
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.uplaodNewAssets}>
+            <div className={styles.uplaodNewAssets} onClick={navigateToPublish}>
               <div className={styles.uplaodNewAssetsWrapper}>
                 <h6>Upload New Asset</h6>
                 <img src={uploadIcon} alt="" />
