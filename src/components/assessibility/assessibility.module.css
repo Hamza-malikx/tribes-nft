@@ -1,4 +1,4 @@
-.privacyPolicy {
+.assessibility {
   background-image: linear-gradient(to right, #a9acc5, #c26296);
   width: 100%;
   padding: 70px 0;
@@ -6,9 +6,4 @@
 .container {
   width: 90%;
   margin: 0 auto;
-}
-.inner h1 {
-  font-size: 40px;
-  color: #fff;
-  text-align: center;
 }

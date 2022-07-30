@@ -9,6 +9,7 @@ import profile from "../../assets/images/carbon_user-avatar.png";
 import cart from "../../assets/images/cart.png";
 import settings from "../../assets/images/clarity_settings-line.png";
 import searchIcon from "../../assets/images/search.png";
+import Offcanvas from "react-bootstrap/Offcanvas";
 const Header = (props) => {
   let location = useLocation();
   const [search, setSearch] = useState(false);
@@ -97,6 +98,10 @@ const Header = (props) => {
       setSettings(false);
     }
   };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   useEffect(() => {
     locationChecker();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -105,7 +110,7 @@ const Header = (props) => {
     <div className={styles.header}>
       <div className={styles.innerWrapper}>
         <div className={styles.logo}>
-          <Link to="/dashboard">
+          <Link to="/">
             <img src={logo} alt="" />
           </Link>
         </div>
@@ -212,10 +217,135 @@ const Header = (props) => {
             </Link>
           )}
         </div>
-        {/* <div className={styles.rightContent}>
-          <div></div>
-          <div></div>
+        <button className={styles.hamburger} onClick={handleShow}>
+          <span>
+            <i className="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>
+              <div className={styles.logo}>
+                <Link to="/">
+                  <img src={logo} alt="" />
+                </Link>
+              </div>
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className={styles.mobileNavWrapper}>
+              <div>
+                {shopp === true ? (
+                  <>
+                    <div
+                      className={`${styles.activeItem} 
+           
+              `}
+                    >
+                      <img src={shop} alt="" />
+                      <p>Store</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/store">
+                    <img src={shop} alt="" className={styles.nonActives} />
+                  </Link>
+                )}
+              </div>
+              <div>
+                {balance === true ? (
+                  <>
+                    <div className={`${styles.activeItem} `}>
+                      <img src={library} alt="" />
+                      <p>Library</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/library">
+                    <img src={library} alt="" className={styles.nonActives} />
+                  </Link>
+                )}
+              </div>
+              {/* <div>
+          {team === true ? (
+            <>
+              <div className={styles.activeItem}>
+                <img src={group} alt="" />
+                <p>Team</p>
+              </div>
+            </>
+          ) : (
+            <Link to="/team">
+              <img src={group} alt="" className={styles.nonActives} />
+            </Link>
+          )}
         </div> */}
+              <div>
+                {search === true ? (
+                  <>
+                    <div className={styles.activeItem}>
+                      <img src={searchIcon} alt="" />
+                      <p>Search</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/search">
+                    <img
+                      src={searchIcon}
+                      alt=""
+                      className={styles.nonActives}
+                    />
+                  </Link>
+                )}
+              </div>
+
+              <div>
+                {cartAg === true ? (
+                  <>
+                    <div
+                      className={`${styles.activeItem} ${styles.activeItemCart}`}
+                    >
+                      <img src={cart} alt="" />
+                      <p>cart</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/cart">
+                    <img src={cart} alt="" className={styles.nonActives} />
+                  </Link>
+                )}
+              </div>
+              <div>
+                {prof === true ? (
+                  <>
+                    <div className={`${styles.activeItem}`}>
+                      <img src={profile} alt="" />
+                      <p>Profile</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/profile">
+                    <img src={profile} alt="" className={styles.nonActives} />
+                  </Link>
+                )}
+              </div>
+              <div>
+                {settingsState === true ? (
+                  <>
+                    <div className={`${styles.activeItem}`}>
+                      <img src={settings} alt="" />
+                      <p>Settings</p>
+                    </div>
+                  </>
+                ) : (
+                  <Link to="/settings">
+                    <img src={settings} alt="" className={styles.nonActives} />
+                  </Link>
+                )}
+              </div>
+            </div>
+          </Offcanvas.Body>
+        </Offcanvas>
       </div>
     </div>
   );

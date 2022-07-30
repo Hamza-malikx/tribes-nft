@@ -5,11 +5,12 @@ import shirtlessLeft from "../../assets/images/shirtless-zombies-pack-3d-model-l
 import thor from "../../assets/images/thors hammer 1.png";
 import Slider from "react-slick";
 const AssetDetails = () => {
+  const vw = window.innerWidth;
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: vw > 680 ? 2 : 1,
     slidesToScroll: 1,
   };
   return (

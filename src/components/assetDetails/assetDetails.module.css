@@ -45,7 +45,7 @@
   gap: 22px;
 }
 .left {
-  width: 100%;
+  width: 72%;
   border-radius: 12px;
 }
 .leftImgWrap {
@@ -251,4 +251,40 @@
 }
 .tagsSpan span:last-child {
   margin-right: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .rightPublicInfo {
+    width: 34%;
+    align-self: stretch;
+  }
+}
+@media screen and (max-width: 870px) {
+  .imageWrapper {
+    flex-direction: column;
+  }
+  .left,
+  .leftDesc,
+  .rightPublicInfo {
+    width: 100%;
+  }
+  .right {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+  }
+  .descPublicInfoWrapper {
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  .assetTitleWrap {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 680px) {
+}
+@media screen and (max-width: 480px) {
+  .right {
+    flex-direction: column;
+    width: 100%;
+  }
 }

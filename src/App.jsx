@@ -3,6 +3,7 @@ import { useMoralis } from "react-moralis";
 import meta from "./4984253-middle.png";
 import eth from "./kisspng-ethereum-portable-network-graphics-computer-icons-developers-icon-request-icon-ethereum-5cb941c220f890.5510979515556448661351.png";
 import Loading from "./components/loading/Loading";
+import assessibility from "./assets/icons/accessibility (1).webp";
 import {
   BrowserRouter as Router,
   Switch,
@@ -59,7 +60,9 @@ const SigninStepThree = lazy(() =>
 const SigninStepFour = lazy(() =>
   import("components/Auth/Signinprocess/SigninStepFour")
 );
-
+const Assessibility = lazy(() =>
+  import("components/assessibility/Assessibility")
+);
 const Publish = lazy(() => import("components/publish/Publish"));
 const Store = lazy(() => import("components/store/Store"));
 const Library = lazy(() => import("components/library/Library"));
@@ -193,13 +196,13 @@ const App = ({ isServerInfo }) => {
               {/* <Route path="/team">
                 <Team />
               </Route> */}
-              <Route path="/dashboard">
+              <Route exact path="/">
                 <Dashboard />
               </Route>
-              <Route path="/details">
+              <Route exact path="/details">
                 <AssetDetails />
               </Route>
-              <Route path="/search">
+              <Route exact path="/search">
                 <Search />
               </Route>
               <Route exact path="/profile">
@@ -259,9 +262,12 @@ const App = ({ isServerInfo }) => {
               <Route exact path="/privacy-policy">
                 <PrivacyPolicy />
               </Route>
+              <Route exact path="/assessibility">
+                <Assessibility />
+              </Route>
             </Suspense>
           </Switch>
-          <Redirect exact from="*" to="/dashboard" />
+          {/* <Redirect exact from="*" to="/dashboard" /> */}
           {/* <Redirect exact from="*" to="/privacy-policy" /> */}
         </div>
       </Router>
@@ -296,12 +302,35 @@ const App = ({ isServerInfo }) => {
                 <img src={eth} alt="" width="30" height="25" />
               </div>
             </div>
-            <a href="/privacy-policy" target="_blank">
-              Privacy Policy
-            </a>
-            <a href="/privacy-policy" target="_blank">
-              Accessibility
-            </a>
+            <div>
+              <a href="/privacy-policy" target="_blank">
+                Privacy Policy
+              </a>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0 5px",
+              }}
+            >
+              <span>
+                <img
+                  src={assessibility}
+                  alt=""
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    objectFit: "cover",
+                    objectPosition: "50% 50%",
+                  }}
+                />
+              </span>
+              <a href="/assessibility" target="_blank">
+                Accessibility
+              </a>
+            </div>
           </Text>
         </Footer>
       </Router>

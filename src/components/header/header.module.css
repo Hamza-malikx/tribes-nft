@@ -95,3 +95,36 @@
   width: 16px;
   height: 15px;
 }
+.hamburger {
+  display: none;
+  background-color: initial;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.75rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+.mobileNavWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px 0px;
+}
+@media screen and (max-width: 768px) {
+  .innerWrapper {
+    justify-content: flex-end;
+  }
+  .innerWrapper div {
+    display: none;
+  }
+  /* .logo, */
+  .hamburger {
+    display: block !important;
+  }
+  .nonActives {
+    width: 40.81px;
+    height: 40px;
+  }
+}
