@@ -281,6 +281,21 @@
   }
 }
 @media screen and (max-width: 680px) {
+  .leftDesc h5,
+  .rightPublicInfo h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 26px;
+  }
+  .leftDesc h6 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .leftDesc p,
+  .rightPublicInfo p {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 @media screen and (max-width: 480px) {
   .right {
