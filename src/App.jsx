@@ -261,8 +261,8 @@ const App = ({ isServerInfo }) => {
               </Route>
             </Suspense>
           </Switch>
-          {/* <Redirect exact from="*" to="/dashboard" /> */}
-          <Redirect exact from="*" to="/privacy-policy" />
+          <Redirect exact from="*" to="/dashboard" />
+          {/* <Redirect exact from="*" to="/privacy-policy" /> */}
         </div>
       </Router>
       <Router>
