@@ -1,0 +1,272 @@
+.shopper {
+  background-image: linear-gradient(to right, #a9acc5, #c26296);
+  width: 100%;
+  padding: 40px 0;
+}
+.hero {
+  background: linear-gradient(
+      83.65deg,
+      rgba(0, 0, 0, 0.2) 5.86%,
+      rgba(167, 114, 255, 0.2) 101.28%
+    ),
+    rgba(0, 0, 0, 0.94);
+  box-shadow: 0px -3px 24px #490eaa;
+  padding: 29px 0;
+  width: 100%;
+  margin-bottom: 61px;
+}
+.heroInner {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.heroWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heroLeft {
+  display: flex;
+  align-items: center;
+}
+.heroLeftImg {
+  margin-right: 50px;
+}
+.heroLeftIntro h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #bbbbbb;
+  margin-bottom: 16px;
+}
+.heroLeftIntro p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.heroLeftIntro h6 {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.heroLeftIntro a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: stretch;
+}
+.heroRight a {
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgb(255 255 255 / 25%);
+  border-radius: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  border: 1px solid #490eaa;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+.heroRight button {
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  border: 1px solid #490eaa;
+  padding: 12px;
+  /* margin-top: 50px; */
+}
+/* assets */
+.assets {
+  padding: 40px 32px 66px;
+  width: 90%;
+  margin: 0 auto;
+  background: #000000;
+  box-shadow: -5px 5px 19px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.assets h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #bfbfbf;
+  border-bottom: 0.5px solid #ffffff;
+  margin-bottom: 39.7px;
+}
+.assetsWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 61px;
+}
+.assetsWrapperInners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 168px;
+  width: 100%;
+  background: #7a5089;
+}
+.assetsWrapperInners p {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 5px 0 13px;
+}
+.assetsWrapperInners h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+.assetsWrapperInners h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+  .assetsWrapper {
+    gap: 16px;
+    /* flex-wrap: wrap; */
+  }
+  .heroWrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .heroRight {
+    align-self: auto;
+    gap: 10px;
+  }
+  .analyticsWrapper {
+    flex-direction: column-reverse;
+  }
+  .heroLeftIntro h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .heroLeftIntro p {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+  .heroLeftIntro h6 {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 18px;
+    margin-bottom: 11px;
+  }
+  .analyticsLeft {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 611px) {
+  .assetsWrapper {
+    gap: 20px 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .assetsWrapperInners {
+    max-width: none;
+    width: 45%;
+  }
+  .assetsWrapperInners div {
+    width: 100%;
+  }
+  .assetsWrapperInners div img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .table {
+    width: 480px;
+  }
+  .teammates h2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  .assetData h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .userListInner ul li {
+    margin-bottom: 24px;
+  }
+  .downloadAnalyticsWrapper h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .tab ul li button {
+    font-size: 14px;
+  }
+  .heroLeftImg {
+    margin-right: 27px;
+  }
+  .heroRight a,
+  .heroRight button {
+    font-size: 12px;
+    line-height: 14px;
+    /* width: 162px; */
+  }
+}
+@media screen and (max-width: 470px) {
+  .assetsWrapperInners {
+    max-width: none;
+    width: 100%;
+  }
+  .assetsWrapper {
+    gap: 20px 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

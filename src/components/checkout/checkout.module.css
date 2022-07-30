@@ -1,0 +1,533 @@
+.checkout {
+  padding: 110px 0 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+.checkoutHeroWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentOptionWrapper {
+  width: 60%;
+  margin-right: auto;
+}
+.paymentOptionWrapper h5 {
+  padding-top: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+.paymentBtnWrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+}
+.paymentBtnWrapper button {
+  max-width: 211px;
+  width: 100%;
+  height: 59px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  background: #000;
+  border: 1px solid #000;
+  transition: 0.5s ease-in-out;
+}
+.activeTab {
+  background: transparent !important;
+}
+.accountCredit {
+  max-width: 215px;
+  align-self: stretch;
+}
+.accountCredit h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.accountCredit input {
+  border: 1px solid #000;
+  padding: 7px 0px 6px 19px;
+  height: 33px;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.paypalInfo {
+  width: 60%;
+  margin-right: auto;
+  margin-top: 60px;
+  transition: 5s ease-in-out;
+}
+.paypalInfoInner {
+  width: 70%;
+  margin-left: auto;
+  text-align: center;
+}
+.paypalInfoInner button {
+  max-width: 435px;
+  width: 100%;
+  border: 1px solid #000000;
+  height: 33px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  text-align: center;
+  padding: 4px 0 6px;
+  background: transparent;
+}
+.accountCredit input:focus {
+  outline: none;
+}
+.accountCreditBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accountCreditBtnWrapper span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: underline;
+  color: #ffffff;
+}
+.accountCreditBtnWrapper span:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.accountCreditBtnWrapper button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  max-width: 124px;
+  width: 100%;
+  padding: 3px 18px;
+  border: 1px solid #490eaa;
+  height: 27px;
+}
+.cardsInfo {
+  width: 60%;
+  margin-right: auto;
+  margin-top: 60px;
+  transition: 5s ease-in-out;
+}
+.cardsInfoInner {
+  width: 70%;
+  margin-left: auto;
+}
+.cardsInfoInner label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+.cardsInfoInner input {
+  border: 1px solid #000;
+  padding: 7px 0px 6px 19px;
+  height: 33px;
+  max-width: 435px;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.cardsInfoInner input:focus {
+  outline: none;
+}
+.line {
+  border-bottom: 3px solid rgba(31, 31, 31, 0.36);
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 64px;
+  margin-bottom: 116px;
+}
+.discount {
+  width: 80%;
+  margin: 0 auto;
+}
+.discount h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 17px;
+}
+.applyWrap {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 70%;
+  gap: 82px;
+}
+.applyWrap input {
+  border: 1px solid #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  /* max-width: 467px; */
+  width: 80%;
+  height: 34px;
+  padding: 7px 0px 6px 19px;
+}
+.applyWrap input:focus {
+  outline: none;
+}
+.applyWrap span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: underline;
+  color: #ffffff;
+}
+.applyWrap span:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.applyBelowWrap {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 147px;
+}
+.leftTable {
+  padding: 19px 21px 36px;
+  background: #000;
+  width: 70%;
+}
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.rows:last-child {
+  margin-bottom: 0px;
+}
+.rowsItem {
+  margin-bottom: 42px;
+}
+.rowsLeft {
+  width: 30%;
+  margin-right: auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  align-self: stretch;
+}
+.rowsRight {
+  width: 60%;
+  margin-left: auto;
+}
+.rowsRightOth {
+  width: 60%;
+  margin-left: auto;
+  text-align: right;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.leftITems {
+  /* margin-bottom: 42px; */
+}
+.rightItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.rightItems:last-child {
+  margin-bottom: 0px;
+}
+.rightItemsName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  width: 60%;
+  text-align: center;
+}
+.rightItemsPrice {
+  width: 20%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  text-align: right;
+}
+.rightDiscount {
+  align-self: stretch;
+}
+.rightDiscount h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+.rightDiscountWrapper {
+  border: 2px solid #000000;
+  border-radius: 5px;
+  width: 100%;
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.rightDiscountContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 11px;
+}
+.rightDiscountContent p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.rightDiscountIcon img {
+  width: 18px;
+  height: 15px;
+}
+.paymentBtnWrap {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto 51px;
+}
+.placeOrderBtn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background: #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  border: 1px solid #490eaa;
+  height: 34px;
+  max-width: 299px;
+  width: 100%;
+}
+.placeOrderBtn:hover {
+  background: transparent;
+}
+.cancelBtn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  border: 1px solid #490eaa;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  background: transparent;
+  height: 34px;
+  max-width: 299px;
+  width: 100%;
+}
+.cancelBtn:hover {
+  background: #490eaa;
+}
+.storage {
+  display: flex;
+  color: #fff;
+  gap: 2px;
+  justify-content: center;
+}
+.storage a {
+  margin-left: 4px;
+  color: #0029ff;
+}
+@media screen and (max-width: 1000px) {
+  .discount {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .checkoutHeroWrapper {
+    flex-direction: column-reverse;
+  }
+  .accountCredit input {
+    margin-bottom: 20px;
+  }
+  .accountCreditBtnWrapper {
+    margin-bottom: 30px;
+  }
+  .paymentBtnWrapper {
+    gap: 0 20px;
+    width: 80%;
+  }
+  .cardsInfoInner {
+    width: 80%;
+  }
+  .cardsInfoInner input {
+    max-width: 497px;
+  }
+  .applyBelowWrap {
+    flex-direction: column-reverse;
+  }
+  .rightDiscountWrapper {
+    max-width: 210px;
+    margin-bottom: 30px;
+  }
+  .leftTable {
+    width: 100%;
+  }
+  .paymentBtnWrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .paymentBtnWrap {
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  .cardsInfo {
+    width: 100%;
+  }
+  .paymentBtnWrapper {
+    width: 100%;
+  }
+  .cardsInfoInner {
+    margin-left: 0;
+  }
+  .discount {
+    width: 100%;
+  }
+  .paymentOptionWrapper {
+    width: 80%;
+  }
+  .applyBelowWrap {
+    margin-bottom: 120px;
+  }
+  .accountCredit {
+    max-width: none;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .paymentOptionWrapper {
+    width: 100%;
+  }
+  .applyBelowWrap {
+    margin-bottom: 100px;
+  }
+  .accountCredit {
+    max-width: none;
+    width: 100%;
+  }
+  .cardsInfoInner {
+    width: 100%;
+  }
+  .line {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .rowsLeft,
+  .rightItemsName,
+  .rightItemsPrice,
+  .rowsRightOth {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .rows {
+    margin-bottom: 15px;
+  }
+  .paymentBtnWrapper button {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .applyWrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .rowsLeft,
+  .rightItemsName,
+  .rightItemsPrice,
+  .rowsRightOth {
+    font-size: 12px;
+    line-height: 14.5px;
+  }
+  .rows {
+    margin-bottom: 12px;
+  }
+  .paymentBtnWrapper button {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

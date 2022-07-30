@@ -1,0 +1,153 @@
+.libraryDropDown ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.libraryDropDown .nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  border: none !important;
+}
+.libraryDropDown .nav-tabs .nav-link:focus-visible {
+  border: none !important;
+  outline: none !important;
+}
+.libraryDropDown .tab-content {
+  background: transparent !important;
+}
+.libraryDropDown .nav-tabs .nav-link {
+  border: 0px solid transparent;
+}
+/* Radio Button */
+.lib .sq-radio {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 22px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff !important;
+}
+
+/* Hide the browser's default radio button */
+.lib .sq-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.lib .checkmark {
+  position: absolute;
+  top: 1px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.lib .sq-radio:hover input ~ .checkmark {
+  background-color: #241d25;
+}
+
+/* When the radio button is checked, add a blue background 
+.sq-radio input:checked ~ .checkmark {
+  background-color: #241d25;
+}
+*/
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.lib .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.lib .sq-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.lib .sq-radio .checkmark:after {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  content: "\f00c";
+  font-size: 11px;
+  color: #000;
+  z-index: 99;
+  text-indent: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.filterWrapper svg {
+  /* display: none; */
+  /* visibility: hidden; */
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/icons/dashicons_arrow-down-alt2 (1).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 34px;
+  height: 26px;
+  right: 0;
+  color: #fff;
+}
+.filterWrapper fieldset {
+  border: none;
+}
+.filterWrapper fieldset:focus-visible {
+  outline: none;
+}
+.filterWrapper
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  position: relative;
+  color: #fff;
+  width: 145px;
+}
+.secondSelect {
+  /* width: 175px; */
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+/* .filterWrapper
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/icons/dashicons_arrow-down-alt2 (1).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 34px;
+  height: 26px;
+  right: 0;
+  color: #fff;
+}
+.filterWrapper
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:before {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/icons/dashicons_arrow-down-alt2 (1).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 34px;
+  height: 26px;
+  right: 0;
+  color: #fff;
+} */
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected img {
+  display: none;
+}

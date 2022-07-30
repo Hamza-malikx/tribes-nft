@@ -1,0 +1,215 @@
+.store {
+  width: 90%;
+  margin: 0 auto;
+  padding: 82px 0 60px;
+}
+.storeWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 40px;
+}
+.left {
+  /* width: 30%; */
+  width: 288px;
+}
+.right {
+  width: 60%;
+}
+.searchBar {
+  position: relative;
+  margin-bottom: 53px;
+}
+.searchBar input {
+  border: none;
+  padding: 8px 32px;
+  width: 288px;
+  background: #71628a;
+  box-shadow: -2px 5px 8px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+}
+.searchBar input:focus {
+  outline: none !important;
+  border: none;
+}
+.searchBar input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #bfbfbf;
+  text-align: right;
+}
+.searchBar input::placeholder {
+  color: #a993c4;
+  text-align: right;
+}
+.searchBar .searchIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 14px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* recommendation */
+.recommendation {
+  margin-bottom: 47px;
+}
+.recommendation h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fffdfd;
+  margin-bottom: 14px;
+}
+.recommendationInner {
+  padding: 32px 32px 29px;
+  background: #000000;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  width: 100%;
+}
+.recommendationInnerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 33px;
+}
+.recommendationInnerBlocks {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  width: 33%;
+}
+.recommendationInnerBlocks h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+}
+.recommendationInnerBlocks img {
+  height: 317px;
+}
+.recommendationBlockDetailsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+}
+.recommendationBlockDetailsWrapper p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.recommendationBlockDetailsWrapper button {
+  background: #490eaa;
+  border: 1px solid #490eaa;
+  box-shadow: -2px 3px 5px -3px rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 2px 10px;
+}
+.sale h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.saleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+.saleBlock img {
+  max-width: 126px;
+  height: 142px;
+}
+.saleBlock p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  .right {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .store {
+    width: 93%;
+  }
+  .storeWrapper {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .left {
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .saleWrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .saleBlock {
+    width: 30%;
+  }
+  .saleBlock img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recommendationInnerWrapper {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .recommendationInnerBlocks {
+    width: 44%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .recommendationInnerWrapper {
+    gap: 35px;
+  }
+  .recommendationInnerBlocks {
+    width: 100%;
+  }
+  .saleWrapper {
+    flex-wrap: wrap;
+  }
+  .saleBlock {
+    width: 45%;
+  }
+  .saleBlock img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto, sans-serif";
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+  padding: "0 10px";
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 15px 15px;
+  height: 50px;
+}
+.innerWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+.rightContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  position: relative;
+  max-width: 115px;
+}
+.search input {
+  width: 100%;
+  background: #b18fb6;
+  border-radius: 12px;
+  border: 1px solid #b18fb6;
+  padding-left: 30px;
+}
+.search i {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.search input::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000 !important;
+}
+.search input:focus-visible {
+  outline: none;
+}
+.activeItem {
+  width: 109px;
+  height: 31px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #b18fb6;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.activeItemSp {
+  width: 135px;
+}
+.activeItemCart {
+  width: 105px;
+}
+.activeItem img {
+  width: 25px;
+  height: 23px;
+}
+.activeItem p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.nonActives {
+  width: 24.81px;
+  height: 25px;
+}
+.shopAct img {
+  width: 16px;
+  height: 15px;
+}

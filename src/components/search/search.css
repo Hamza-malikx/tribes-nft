@@ -1,0 +1,206 @@
+.searchLeftAccordian .accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+.searchLeftAccordian .accordion-button {
+  background-color: transparent !important;
+}
+.searchLeftAccordian .accordion-button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px !important;
+  line-height: 23px;
+  color: #471677 !important;
+}
+.searchLeftAccordian .accordion-button:focus {
+  box-shadow: none !important;
+}
+.searchLeftAccordian .accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #471677 !important;
+  position: relative;
+}
+.searchLeftAccordian .accordion-button:not(.collapsed)::after {
+  background-image: url("./Vector.png") !important;
+  width: 10px !important;
+  height: 15px !important;
+  background-size: contain !important;
+  background-position: center !important;
+  transform: rotate(0deg) !important;
+}
+.searchLeftAccordian .accordion-button::after {
+  position: absolute;
+  left: 0;
+  transform: rotate(-90deg) !important;
+  background-image: url("./Vector.png") !important;
+  width: 10px !important;
+  height: 15px !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+.searchLeftAccordian .accordion-body {
+  padding: 0.3rem 1.25rem 1rem !important;
+}
+/* Radio Button */
+.sq-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #471677;
+}
+
+/* Hide the browser's default radio button */
+.sq-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.sq-radio:hover input ~ .checkmark {
+  background-color: #241d25;
+}
+
+/* When the radio button is checked, add a blue background 
+.sq-radio input:checked ~ .checkmark {
+  background-color: #241d25;
+}
+*/
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.sq-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.sq-radio .checkmark:after {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  content: "\f00c";
+  font-size: 11px;
+  color: #000;
+  z-index: 99;
+  text-indent: 0;
+  margin: 0;
+  cursor: pointer;
+}
+/* Tabs */
+.tabs {
+  margin-top: 50px;
+}
+.tabs .nav {
+  justify-content: flex-end;
+}
+.tabs .nav-tabs {
+  border: none !important;
+}
+.tabs .nav-item {
+  margin-right: 40px;
+}
+.tabs .nav-item:last-child {
+  margin-right: 0px;
+}
+.tabs .nav-tabs .nav-link:hover {
+  border-color: transparent !important;
+}
+.tabs .nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #471677 !important;
+}
+.tabs .nav-tabs .nav-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 22px;
+  color: rgba(71, 22, 119, 0.44);
+}
+.tabs .tab-content > .active {
+  display: block;
+  background: #1b1c1e;
+  color: #fff;
+  padding: 56px 87px;
+}
+
+/* Content Accordian */
+.content {
+}
+.content .accordion-button {
+  background-color: #b18fb6 !important;
+  padding: 0.5rem 1.25rem;
+}
+.content .accordion-button:focus {
+  box-shadow: none !important;
+}
+.content .accordion-item {
+  border: none !important;
+}
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .tabs {
+    margin-top: 30px;
+  }
+  .tabs .nav-item {
+    margin-right: 20px;
+  }
+  .tabs .tab-content > .active {
+    padding: 39px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tabs .nav-item {
+    margin-right: 0px;
+  }
+  .tabs .nav-tabs {
+    margin-bottom: 5px !important;
+  }
+  .tabs .tab-content > .active {
+    padding: 20px;
+  }
+  .tabs {
+    margin-top: 15px;
+  }
+}
