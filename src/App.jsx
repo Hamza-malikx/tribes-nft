@@ -216,7 +216,7 @@ const App = ({ isServerInfo }) => {
             </Suspense>
           </Switch>
 
-          {/* <Redirect exact from="/" to="/dashboard" /> */}
+          <Redirect exact from="/" to="/dashboard" />
           {/* <Redirect exact from="*" to="/privacy-policy" /> */}
         </div>
         <BgFooter />
