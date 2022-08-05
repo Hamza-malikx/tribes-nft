@@ -104,30 +104,6 @@ const Policies = () => {
               </p>
             </div>
           </div>
-
-          <div class="policies_tab_content_data">
-            <h4>Section 2</h4>
-            <div class="policies_tab_content_des">
-              <p>
-                Dolor, amet a auctor elementum ut sit. Ut vitae quis scelerisque
-                amet massa hac ut leo, enim. Interdum lobortis interdum tellus
-                eg- estas nibh. Lorem epsilum elementum ut sit. Ut vitae quis
-                sceleri.
-              </p>
-            </div>
-          </div>
-
-          <div class="policies_tab_content_data">
-            <h4>Section 3</h4>
-            <div class="policies_tab_content_des">
-              <p>
-                Dolor, amet a auctor elementum ut sit. Ut vitae quis scelerisque
-                amet massa hac ut leo, enim. Interdum lobortis interdum tellus
-                eg- estas nibh. Lorem epsilum elementum ut sit. Ut vitae quis
-                sceleri.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </>
