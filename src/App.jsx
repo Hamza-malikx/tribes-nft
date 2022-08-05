@@ -1,29 +1,24 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
-import meta from "./4984253-middle.png";
-import eth from "./kisspng-ethereum-portable-network-graphics-computer-icons-developers-icon-request-icon-ethereum-5cb941c220f890.5510979515556448661351.png";
 import Loading from "./components/loading/Loading";
-import assessibility from "./assets/icons/accessibility (1).webp";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink,
-  useHistory,
   Redirect,
 } from "react-router-dom";
 import Account from "components/Account";
 import Chains from "components/Chains";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
-import { Menu, Layout } from "antd";
+import { Layout } from "antd";
 import SearchCollections from "components/SearchCollections";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import Text from "antd/lib/typography/Text";
 import NFTMarketTransactions from "components/NFTMarketTransactions";
 import Header1 from "components/header/header";
+import BgFooter from "components/footer/BgFooter";
 const Shopper = lazy(() => import("components/profile/shopper/Shopper"));
 const Login = lazy(() => import("components/Auth/login/Login"));
 const Creator = lazy(() => import("components/profile/creator/Creator"));
@@ -73,7 +68,7 @@ const CloudStorage = lazy(() => import("components/cloudStorage/CloudStorage"));
 const PrivacyPolicy = lazy(() =>
   import("components/privacyPolicy/PrivacyPolicy")
 );
-const { Header, Footer } = Layout;
+// const { Header, Footer } = Layout;
 const styles = {
   content: {
     display: "flex",
@@ -117,11 +112,7 @@ const App = ({ isServerInfo }) => {
     if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading) enableWeb3();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, isWeb3Enabled]);
-  const history = useHistory();
-  const privacyPolicyHandler = () => {
-    // history("/privacy-policies");
-    // window.location.href = "/privacy-policies";
-  };
+
   return (
     <Layout
       style={{
@@ -132,59 +123,16 @@ const App = ({ isServerInfo }) => {
     >
       <Router>
         <Header1 data={<NativeBalance />} />
-
-        {/* <Header style={styles.header}>
-          <img
-            src={logo}
-            alt=""
-            width="60"
-            style={{ height: "100%", width: "auto" }}
-          />
-          <SearchCollections setInputValue={setInputValue} />
-          <Menu
-            theme="light"
-            mode="horizontal"
-            style={{
-              display: "flex",
-              fontSize: "17px",
-              fontWeight: "500",
-              marginLeft: "50px",
-              width: "100%",
-            }}
-            defaultSelectedKeys={["nftMarket"]}
-          >
-            <Menu.Item key="shop" onClick={() => setInputValue("explore")}>
-              <NavLink to="/shop">🛒 Shop</NavLink>
-            </Menu.Item>
-            <Menu.Item key="nft">
-              <NavLink to="/nftBalance">Library</NavLink>
-            </Menu.Item>
-            <Menu.Item key="transactions">
-              <NavLink to="/Transactions"> Profile</NavLink>
-            </Menu.Item>
-            <Menu.Item>
-              <NavLink to="/dashboard">Dashboard</NavLink>
-            </Menu.Item>
-            <Menu.Item>
-              <NavLink to="/search">Search</NavLink>
-            </Menu.Item>
-          </Menu>
-          <div style={styles.headerRight}>
-            <Chains />
-            <NativeBalance />
-            <Account />
-          </div>
-        </Header> */}
         <div style={styles.content}>
           <Switch>
             <Suspense fallback={<Loading />}>
               {/* <Route path="/nftBalance">
               <NFTBalance />
             </Route> */}
-              <Route path="/library">
+              <Route exact path="/library">
                 <Library />
               </Route>
-              <Route path="/shop">
+              <Route exact path="/shop">
                 <NFTTokenIds
                   inputValue={inputValue}
                   setInputValue={setInputValue}
@@ -196,7 +144,7 @@ const App = ({ isServerInfo }) => {
               {/* <Route path="/team">
                 <Team />
               </Route> */}
-              <Route exact path="/">
+              <Route exact path="/dashboard">
                 <Dashboard />
               </Route>
               <Route exact path="/details">
@@ -267,12 +215,14 @@ const App = ({ isServerInfo }) => {
               </Route>
             </Suspense>
           </Switch>
-          {/* <Redirect exact from="*" to="/dashboard" /> */}
+
+          {/* <Redirect exact from="/" to="/dashboard" /> */}
           {/* <Redirect exact from="*" to="/privacy-policy" /> */}
         </div>
+        <BgFooter />
       </Router>
       <Router>
-        <Footer style={{ textAlign: "center" }}>
+        {/* <Footer style={{ textAlign: "center" }}>
           <Text style={{ display: "block" }}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div>
@@ -332,7 +282,7 @@ const App = ({ isServerInfo }) => {
               </a>
             </div>
           </Text>
-        </Footer>
+        </Footer> */}
       </Router>
     </Layout>
   );

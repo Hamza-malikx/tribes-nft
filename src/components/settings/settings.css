@@ -815,7 +815,9 @@
   width: 100%;
   gap: 15px;
 }
-.policies_tab_content_des p {
+.policies_tab_content_des p,
+.policies_tab_content_des span,
+.policies_tab_content_des ul {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;

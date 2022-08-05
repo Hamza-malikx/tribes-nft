@@ -105,12 +105,13 @@ const Header = (props) => {
   useEffect(() => {
     locationChecker();
     // eslint-disable-next-line react-hooks/exhaustive-deps
+    handleClose();
   }, [location]);
   return (
     <div className={styles.header}>
       <div className={styles.innerWrapper}>
         <div className={styles.logo}>
-          <Link to="/">
+          <Link to="/dashboard">
             <img src={logo} alt="" />
           </Link>
         </div>

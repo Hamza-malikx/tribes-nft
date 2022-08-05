@@ -15,6 +15,7 @@
 .publish form {
   padding-left: 101px;
   max-width: 629px;
+  margin: 0 auto;
 }
 .publish label {
   font-family: "Roboto";
@@ -80,7 +81,7 @@
 }
 .method img {
   width: 110px;
-  height: 112px;
+  height: auto;
   margin: 0 auto 6px;
 }
 .mediaWrap {
@@ -152,4 +153,42 @@
   width: 110px;
   height: 112px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .publish form {
+    margin: 0 auto 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .publish form {
+    padding-left: 5px;
+  }
+  .sellerInformation h6 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 15.9px;
+  }
+  .publish label {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .sellerInformation input,
+  .sellerInformation label {
+    margin-left: 0px;
+  }
+  .mediaWrap img {
+    width: 60px;
+    height: 60px;
+  }
+  .buttonWrap button {
+    font-size: 18px;
+    line-height: 18px;
+    max-width: 192px;
+    height: 50px;
+  }
+  .method img,
+  .successWrapp img {
+    width: 90px;
+  }
 }
