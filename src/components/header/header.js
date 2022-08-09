@@ -227,7 +227,7 @@ const Header = (props) => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
               <div className={styles.logo}>
-                <Link to="/">
+                <Link to="/dashboard">
                   <img src={logo} alt="" />
                 </Link>
               </div>

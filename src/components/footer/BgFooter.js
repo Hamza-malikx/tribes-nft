@@ -37,6 +37,9 @@ const BgFooter = () => {
         {/* <div>
           <Link to="/privacy-policy">Privacy Policy</Link>
         </div> */}
+        <div>
+          <Link to="/settings">Privacy Policy</Link>
+        </div>
         <div
           style={{
             display: "flex",
